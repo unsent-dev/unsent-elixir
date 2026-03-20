@@ -11,7 +11,7 @@ defmodule Unsent.MixProject do
       package: package(),
       deps: deps(),
       name: "Unsent",
-      source_url: "https://github.com/souravsspace/unsent-elixir"
+      source_url: "https://github.com/unsent-dev/unsent-elixir"
     ]
   end
 
@@ -33,7 +33,7 @@ defmodule Unsent.MixProject do
   defp package do
     [
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/souravsspace/unsent-elixir"}
+      links: %{"GitHub" => "https://github.com/unsent-dev/unsent-elixir"}
     ]
   end
 end

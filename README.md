@@ -551,7 +551,7 @@ source .env.local && mix test test/integration_test.exs
 - [Documentation](https://docs.unsent.dev)
 - [API Reference](https://docs.unsent.dev/api-reference)
 - [Dashboard](https://app.unsent.dev)
-- [GitHub](https://github.com/souravsspace/elixir-sdk)
+- [GitHub](https://github.com/unsent-dev/elixir-sdk)
 
 ## License
 
