@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.Domains do
   @moduledoc """
   Client for domain operations.
@@ -72,6 +73,79 @@ defmodule Unsent.Domains do
     params = build_query_params(query, [:startDate, :endDate])
     path = build_path("/domains/#{domain_id}/stats", params)
     Client.get(client, path)
+  end
+
+  @doc """
+  List all routes for a domain.
+
+  ## Parameters
+
+    * `id` - The ID of the domain
+
+  ## Examples
+
+      {:ok, routes} = Unsent.Domains.list_routes(client, "domain_123")
+  """
+  @spec list_routes(Client.t(), String.t()) :: {:ok, list(map())} | {:error, any()}
+  def list_routes(client, id) do
+    Client.get(client, "/domains/#{id}/routes")
+  end
+
+  @doc """
+  Add a route to a domain.
+
+  ## Parameters
+
+    * `id` - The ID of the domain
+    * `payload` - Route data:
+      * `:providerConnectionId` - Provider connection ID (required)
+      * `:weight` - Route weight (optional)
+
+  ## Examples
+
+      {:ok, route} = Unsent.Domains.add_route(client, "domain_123", %{providerConnectionId: "conn_456"})
+  """
+  @spec add_route(Client.t(), String.t(), map()) :: {:ok, map()} | {:error, any()}
+  def add_route(client, id, payload) do
+    Client.post(client, "/domains/#{id}/routes", payload)
+  end
+
+  @doc """
+  Update a domain route.
+
+  ## Parameters
+
+    * `id` - The ID of the domain
+    * `route_id` - The ID of the route
+    * `payload` - Route data:
+      * `:weight` - Route weight (optional)
+      * `:clickTracking` - Enable click tracking (optional)
+      * `:openTracking` - Enable open tracking (optional)
+
+  ## Examples
+
+      {:ok, result} = Unsent.Domains.update_route(client, "domain_123", "route_456", %{weight: 50})
+  """
+  @spec update_route(Client.t(), String.t(), String.t(), map()) :: {:ok, map()} | {:error, any()}
+  def update_route(client, id, route_id, payload) do
+    Client.patch(client, "/domains/#{id}/routes/#{route_id}", payload)
+  end
+
+  @doc """
+  Delete a domain route.
+
+  ## Parameters
+
+    * `id` - The ID of the domain
+    * `route_id` - The ID of the route
+
+  ## Examples
+
+      {:ok, result} = Unsent.Domains.delete_route(client, "domain_123", "route_456")
+  """
+  @spec delete_route(Client.t(), String.t(), String.t()) :: {:ok, map()} | {:error, any()}
+  def delete_route(client, id, route_id) do
+    Client.delete(client, "/domains/#{id}/routes/#{route_id}")
   end
 
   # Private helpers

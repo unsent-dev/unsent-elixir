@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.Settings do
   @moduledoc """
   Client for team settings operations.

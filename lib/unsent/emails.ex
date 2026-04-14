@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.Emails do
   @moduledoc """
   Client for email operations.

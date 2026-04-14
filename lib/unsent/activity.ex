@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.Activity do
   @moduledoc """
   Client for activity feed operations.

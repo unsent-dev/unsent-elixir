@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.Analytics do
   @moduledoc """
   Client for analytics operations.

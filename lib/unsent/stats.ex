@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.Stats do
   @moduledoc """
   Client for statistics operations.

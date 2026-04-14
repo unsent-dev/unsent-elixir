@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.Teams do
   @moduledoc """
   Client for team operations.
@@ -13,7 +14,7 @@ defmodule Unsent.Teams do
       {:ok, team} = Unsent.Teams.get(client)
   """
   def get(client) do
-    Client.get(client, "/teams/current")
+    Client.get(client, "/team")
   end
 
   @doc """

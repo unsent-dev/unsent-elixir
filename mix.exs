@@ -4,7 +4,7 @@ defmodule Unsent.MixProject do
   def project do
     [
       app: :unsent,
-      version: "1.0.3",
+      version: "1.1.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       description: "Official Elixir SDK for the Unsent API - Send transactional emails with ease",

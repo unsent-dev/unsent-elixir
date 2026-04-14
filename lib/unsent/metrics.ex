@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.Metrics do
   @moduledoc """
   Client for performance metrics operations.

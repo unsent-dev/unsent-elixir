@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.Suppressions do
   @moduledoc """
   Client for suppression list management operations.

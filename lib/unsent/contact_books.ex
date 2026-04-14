@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.ContactBooks do
   @moduledoc """
   Client for contact book management operations.

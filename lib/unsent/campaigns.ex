@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.Campaigns do
   @moduledoc """
   Client for campaign operations.
@@ -41,5 +42,17 @@ defmodule Unsent.Campaigns do
   @spec resume(Client.t(), String.t()) :: {:ok, map()} | {:error, any()}
   def resume(client, campaign_id) do
     Client.post(client, "/campaigns/#{campaign_id}/resume", %{})
+  end
+
+  @doc """
+  Delete a campaign.
+
+  ## Examples
+
+      {:ok, result} = Unsent.Campaigns.delete(client, "campaign_id")
+  """
+  @spec delete(Client.t(), String.t()) :: {:ok, map()} | {:error, any()}
+  def delete(client, campaign_id) do
+    Client.delete(client, "/campaigns/#{campaign_id}")
   end
 end

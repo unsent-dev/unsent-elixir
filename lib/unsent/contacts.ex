@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.Contacts do
   @moduledoc """
   Client for contact operations.

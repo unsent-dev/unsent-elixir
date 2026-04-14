@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.Webhooks do
   @moduledoc """
   Client for webhook operations.

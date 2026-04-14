@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.ApiKeys do
   @moduledoc """
   Client for API key management operations.

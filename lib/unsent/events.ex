@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.Events do
   @moduledoc """
   Client for email event operations.

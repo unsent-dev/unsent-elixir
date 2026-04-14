@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.Templates do
   @moduledoc """
   Client for email template operations.

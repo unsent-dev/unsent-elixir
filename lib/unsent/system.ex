@@ -1,3 +1,4 @@
+# @manual
 defmodule Unsent.System do
   @moduledoc """
   Client for system operations.
